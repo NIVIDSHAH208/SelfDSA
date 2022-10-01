@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class RecursionDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter the number >>>>>");
+		int test = scanner.nextInt();
+		printSomething(test);
+		
+		System.out.println("Factorial is: "+findFactorial(test));
+	}
+	
+	public static void printSomething(int testNum) {
+		if(testNum<1) {
+			return;
+		}else {
+			System.out.println("Number is: "+testNum);
+			printSomething(testNum-1);
+			System.out.println("Number is: "+testNum);
+			return;
+		}
+	}
+	
+	
+	public static int findFactorial(int testNum) {
+		int finalNum=1;
+		if(testNum<=1) {
+			return 1;
+		}else {
+			finalNum*=testNum;
+			findFactorial(testNum-1);
+		}
+		return finalNum;
+	}
+
+}

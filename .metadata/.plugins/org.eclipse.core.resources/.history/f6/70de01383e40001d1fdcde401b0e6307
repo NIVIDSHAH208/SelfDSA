@@ -1,0 +1,21 @@
+
+public class RecursionDemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int test = 5;
+		printSomething(test);
+	}
+	
+	public static void printSomething(int testNum) {
+		if(testNum<1) {
+			return;
+		}else {
+			System.out.println("Number is: "+testNum);
+			printSomething(testNum-1);
+			System.out.println("Number is: "+testNum);
+			return;
+		}
+	}
+
+}

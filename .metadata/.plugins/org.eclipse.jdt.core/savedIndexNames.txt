@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\nivid\OneDrive\Desktop\SelfDSALgo\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1642175237.index
+4038524319.index
