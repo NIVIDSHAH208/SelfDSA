@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class ArmStrong {
+	
+	static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		printArm();
+		// TODO Auto-generated method stub
+
+		//find all the armstrong number between 100 and 999
+//		selfArmstrong();
+		
+		
+	}
+
+
+	public static void selfArmstrong() {
+		System.out.print("All the armstrong numbers are::: ");
+		for(int i=100; i<1000; i++) {
+			int d1 = i%10;
+			int d2 = i%100/10;
+			int d3 = i/100;
+
+			int sum = (int) (Math.pow(d1, 3)+Math.pow(d2, 3)+Math.pow(d3, 3));
+			
+			if(sum==i) {
+				System.out.println(sum);
+			}
+//			
+		}
+	}
+	
+	
+	public static void printArm() {
+		System.out.println("Enter the starting number>>> ");
+		
+		int start = in.nextInt();
+		System.out.println("Enter the ending number>>>");
+		int end = in.nextInt();
+		     
+		System.out.println("All the armstrong numbers are: ");
+		for(int i=start; i<=end;i++) {
+//		int i=153;
+			int og = i;
+			int sum = 0;
+			while(og>0) {
+				int rem = og%10;                                                                      
+				og = og/10;                                                                                                                                                                                                                                                                                                                                                                                                                                        
+				sum+=(int)Math.pow(rem, 3);
+			}
+//			System.out.println(sum+" and "+i);
+			if(sum==i) {	
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please enter the number n>>");
+		int n = in.nextInt();
+		System.out.println(myFib(n));
+	}
+
+	
+	public static int myFib(int n) {
+		int firstNum = 0;
+		int secondNum = 1;
+		int fibNum = 0;
+		
+		if(n==0||n==1) {
+			return n;
+		}
+		else {
+			for(int i=1; i<n;i++){
+	            fibNum = firstNum + secondNum;         
+	            firstNum = secondNum;
+	            secondNum = fibNum;
+	        }
+	    
+	        return fibNum;
+		}
+	}
+}
